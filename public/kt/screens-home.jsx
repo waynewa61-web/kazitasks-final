@@ -20,6 +20,12 @@ function HomeHeader() {
       <div className="row between" style={{ marginBottom: 16 }}>
         <div className="row" style={{ gap: 12 }}>
           <div style={{ background: '#fff', padding: '4px 8px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
+            <img src="assets/kazitasks-logo.png" alt="KaziTasks" style={{ height: '22px' }} />
+          </div>
+          <RoleSwitch />
+        </div>
+        <div className="row" style={{ gap: 12 }}>
+          <div style={{ background: '#fff', padding: '4px 8px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
             <img src="assets/kazitasks-logo.png" alt="KaziTasks" style={{ height: '20px' }} />
           </div>
           <div className="row" style={{ gap: 12 }}>
