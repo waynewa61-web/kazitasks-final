@@ -369,3 +369,9 @@ html, body, .app, .app .body, .app .main {
 .sheet { max-height: 90vh !important; }
 .sheet .sbody { overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
 .navyband { padding-top: 24px !important; padding-bottom: 32px !important; }
+
+  /* PHONE FIXES */
+  .composer { flex: none !important; padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important; background: var(--surface); z-index: 10; }
+  .sheet .sbody { overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
+  .navyband { padding-top: 24px !important; padding-bottom: 32px !important; }
+  
