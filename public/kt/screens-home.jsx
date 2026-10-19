@@ -18,7 +18,12 @@ function HomeHeader() {
   return (
     <div className="navyband" style={{ paddingTop: 6 }}>
       <div className="row between" style={{ marginBottom: 16 }}>
-        <RoleSwitch />
+        <div className="row" style={{ gap: 12 }}>
+          <div style={{ background: '#fff', padding: '4px 8px', borderRadius: '8px', display: 'flex', alignItems: 'center' }}>
+            <img src="assets/kazitasks-logo.png" alt="KaziTasks" style={{ height: '20px' }} />
+          </div>
+          <RoleSwitch />
+        </div>
         <div className="row" style={{ gap: 2 }}>
           <button className="iconbtn" style={{ color: '#fff' }} onClick={() => kt.go('notifs')} aria-label="Notifications"><Icon n="bell" />{unread > 0 && <span className="dot" style={{ boxShadow: '0 0 0 2px var(--navy)' }} />}</button>
           <button onClick={() => kt.go('account')} style={{ marginLeft: 4 }}><Avatar name="Daniel Kato" color="#F7941D" size={34} /></button>

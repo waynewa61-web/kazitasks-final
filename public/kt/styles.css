@@ -353,3 +353,11 @@ html, body, .app, .app .body, .app .main {
   max-height: 100vh !important; 
   overflow: hidden !important; 
 }
+
+.composer { flex: none !important; padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important; }
+.app .main { padding-bottom: 0 !important; }
+/* Fix Filter Sheet Scrolling */
+.sheet { max-height: 90vh !important; }
+.sheet .sbody { min-height: 0 !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
+/* Fix Homepage Spacing */
+.navyband { padding-top: 20px !important; padding-bottom: 28px !important; }

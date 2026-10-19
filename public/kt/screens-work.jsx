@@ -105,7 +105,11 @@ function ApplySheet({ w, onClose }) {
         <div className="field"><label>Your price (UGX)</label><input className="input money" value={Number(bid.replace(/\D/g, '') || 0).toLocaleString()} onChange={(e) => setBid(e.target.value)} /><span className="hint">You’ll receive about <b>UGX {ugx(net)}</b> after the current KaziTasks fee.</span></div>
         <div className="field"><label>Delivery time</label><Chips multi={false} options={['1 day', '3 days', '1 week', '2 weeks']} value="3 days" onChange={() => {}} /></div>
         <div className="field"><label>Message to client</label><textarea className="ta" defaultValue="Hello! I've designed menus for 3 cafés in Kampala and can deliver a print-ready A1 file by Thursday." /></div>
-        <button className="fab-sim"><Icon n="clip" s={16} /><span><b>Attach samples</b> · PDF, JPG up to 10 MB</span></button>
+        <label className="fab-sim" style={{ cursor: 'pointer' }}>
+      <Icon n="clip" s={16} />
+      <span><b>Attach samples</b> · PDF, JPG up to 10 MB</span>
+      <input type="file" style={{ display: 'none' }} onChange={(e) => alert(e.target.files[0]?.name ? 'Attached: ' + e.target.files[0].name : 'No file chosen')} />
+   </label>
         <div className="row between t-xs"><span>Uses 2 credits · 43 left</span><span>Plus plan</span></div>
         <button className="btn primary block" onClick={() => { kt.apply(w.id); onClose(); kt.toast('Application sent'); }}>Submit application</button>
       </div>
@@ -171,7 +175,11 @@ function PostQuickScreen() {
             <div className="field"><label>Category</label><Chips multi={false} options={KT_CATS.slice(0, 9)} value={f.cat} onChange={(v) => set('cat', v)} /></div>
             <ChipPicker label="Skills or service needed" options={KT_SKILLS} value={f.skills} onChange={(v) => set('skills', v)} placeholder="Search skills" />
             <div className="field"><label>Describe the task</label><textarea className="ta" placeholder="What needs to be done? Any special instructions?" value={f.desc} onChange={(e) => set('desc', e.target.value)} /></div>
-            <button className="fab-sim"><Icon n="camera" s={18} /><span><b>Add photos or files</b> · helps Taskers quote accurately</span></button>
+            <label className="fab-sim" style={{ cursor: 'pointer' }}>
+      <Icon n="camera" s={18} />
+      <span><b>Add photos or files</b> · helps Taskers quote accurately</span>
+      <input type="file" style={{ display: 'none' }} onChange={(e) => alert(e.target.files[0]?.name ? 'Attached: ' + e.target.files[0].name : 'No file chosen')} />
+   </label>
           </div>}
           {step === 1 && <div className="stack" style={{ gap: 18 }}>
             <div className="field"><label>Work arrangement</label><Seg value={f.mode} options={[['On-site', 'On-site'], ['Remote', 'Remote'], ['Either', 'Either']]} onChange={(v) => set('mode', v)} /></div>
