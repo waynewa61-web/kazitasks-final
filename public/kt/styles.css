@@ -361,3 +361,11 @@ html, body, .app, .app .body, .app .main {
 .sheet .sbody { min-height: 0 !important; overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
 /* Fix Homepage Spacing */
 .navyband { padding-top: 20px !important; padding-bottom: 28px !important; }
+
+/* FORCE FIXES */
+.app { height: 100vh !important; display: flex; flex-direction: column; }
+.app .main { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.composer { flex: none !important; padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important; background: var(--surface); z-index: 10; }
+.sheet { max-height: 90vh !important; }
+.sheet .sbody { overflow-y: auto !important; -webkit-overflow-scrolling: touch !important; padding-bottom: 40px !important; }
+.navyband { padding-top: 24px !important; padding-bottom: 32px !important; }
